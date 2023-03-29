@@ -10,31 +10,54 @@
                 a. Exemplo com X=2:
                 b. “DIEGO” passará a ser “FKGIQ”
             */
-            string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVXZWY";
-            char[] letraAlfabeto = alfabeto.ToCharArray();
 
             while (true) 
             { 
-                Console.WriteLine("Digite uma frase: ");
-                string frase = Console.ReadLine();
-                frase = frase.ToUpper();
-                char[] fraseConvertidaChar = frase.ToCharArray();
-                for (int indiceFrase = 0; indiceFrase < fraseConvertidaChar.Length; indiceFrase++)
+                Console.Clear();
+
+                char[] letraAlfabeto = ConverterAlfabeto();
+                int parcela = GerarParcela();
+                char[] fraseConvertidaChar = GerarFrase();
+
+                GerarCriptografia(parcela, fraseConvertidaChar, letraAlfabeto);
+                Console.ReadLine();
+            }
+        }
+        public static void GerarCriptografia(int parcela, char[] fraseConvertidaChar, char[] letraAlfabeto)
+        {
+            for (int indiceFrase = 0; indiceFrase < fraseConvertidaChar.Length; indiceFrase++)
+            {
+                for (int indiceAlfabeto = 0; indiceAlfabeto < letraAlfabeto.Length; indiceAlfabeto++)
                 {
-                    for (int indiceAlfabeto = 0; indiceAlfabeto < alfabeto.Length; indiceAlfabeto++)
+                    if (fraseConvertidaChar[indiceFrase] == letraAlfabeto[indiceAlfabeto])
                     {
-                        if (fraseConvertidaChar[indiceFrase] == letraAlfabeto[indiceAlfabeto])
-                        {
-                            int indice = indiceAlfabeto + 2;
-                            fraseConvertidaChar[indiceFrase] = letraAlfabeto[indice];
-                            Console.WriteLine(fraseConvertidaChar);
-                            indiceAlfabeto = 0;
-                            break;
-                        }
+                        fraseConvertidaChar[indiceFrase] = letraAlfabeto[indiceAlfabeto + parcela];
+                        indiceAlfabeto = 0;
+                        break;
                     }
                 }
             }
-            Console.ReadLine();
+            Console.WriteLine(fraseConvertidaChar);
+        }
+        public static int GerarParcela()
+        {
+            Console.WriteLine("Digite o valor inteiro da parcela a ser somada");
+            int parcela = Convert.ToInt32(Console.ReadLine());
+            return parcela;
+        }
+        public static char[] GerarFrase()
+        {
+            Console.WriteLine("Digite uma frase: ");
+            string frase = Console.ReadLine();
+            frase = frase.ToUpper();
+            char[] fraseConvertida = frase.ToCharArray();
+            return fraseConvertida;
+        }
+        public static char[] ConverterAlfabeto()
+        {
+            string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVXZWY";
+            char[] letraAlfabeto = alfabeto.ToCharArray();
+            return letraAlfabeto;
         }
     }
 }
