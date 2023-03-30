@@ -1,5 +1,4 @@
 <h1>Atividades09<h1>
-</br>
 <h2>Exercicio 01</h2>
 </br>
 Escreva um programa que receba uma frase do usuário e</br>
