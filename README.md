@@ -1,8 +1,8 @@
-#Atividades09
+<h1>Atividades09<h1>
 </br>
 
 </br>
-### Exercicio 01
+<h2>Exercicio 01</h2>
 </br>
 Escreva um programa que receba uma frase do usuário e</br>
 converta todas as palavras para o formato "Title Case",</br>
@@ -10,14 +10,14 @@ ou seja,</br>
 todas as primeiras letras das palavras devem ser maiúsculas.</br>
 </br>
 
-###Exercicio 02
+<h2>Exercicio 02</h2>
 </br>
 Dada uma string contendo uma frase,</br>
 escreva um programa em C# que conte o número de palavras na frase e</br>
 imprima o resultado.</br>
 </br>
 
-###Exercicio 03
+<h2>Exercicio 03</h2>
 </br>
 Desenvolva uma aplicação troque cada letra de um texto por outra do alfabeto X posições a frente,</br>
 onde X pode ser escolhido por você (cifra de César)</br>
@@ -25,7 +25,7 @@ a. Exemplo com X=2:</br>
 b. “DIEGO” passará a ser “FKGIQ”</br>
 </br>
 
-###Exercicio 04
+<h2>Exercicio 04</h2>
 </br>
         Faça um programa que encontre o conjunto de 5 dígitos consecutivos na sequência abaixo</br>
         que gere o maior produto:</br>
@@ -52,13 +52,13 @@ b. “DIEGO” passará a ser “FKGIQ”</br>
             71636269561882670428252483600823257530420752963450</br>
 </br>
             Primeiro conjunto de 5 dígitos consecutivos: 73167</br>
-            7*3=21</br>
-            21*1=21</br>
-            21*6=126</br>
-            126*7=882</br>
+            7*x3=21</br>
+            21*x1=21</br>
+            21*x6=126</br>
+            126*x7=882</br>
 </br>
 
-###Exercicio 05
+<h2>Exercicio 05</h2>
 </br>
             Crie um programa em C# que solicite ao usuário que digite uma frase. </br>
             Em seguida, o programa deve utilizar métodos da classe string para realizar as seguintes operações:</br>
@@ -70,7 +70,7 @@ b. “DIEGO” passará a ser “FKGIQ”</br>
                  Imprimir a última palavra da frase.</br>
 </br>
 
-###Exercicio 06
+<h2>Exercicio 06</h2>
 </br>
 Desenvolva um programa em C# que leia o arquivo cidades.csv e</br>
 dê a possibilidade de apresentar as cidades agrupadas</br>
